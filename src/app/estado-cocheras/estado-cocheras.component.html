@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<div>
+    <button (click)="agregarFila()" class="boton-resaltado">+</button>
+</div>
+
+<main>
+    <div id="tabla">
+        <div id="header-tabla">
+            <div>{{header.nro}}</div>
+            <div>{{header.disponibilidad}}</div>
+            <div>{{header.ingreso}}</div>
+            <div>{{header.acciones}}</div>
+        </div>
+
+        @for (fila of filas; track fila.id) {
+            <div (click)="!fila.activo && !fila.deshabilitada && abrirModalNuevoEstacionamiento(fila.id)">
+                <div>{{ $index + 1 }}</div>
+                @if (fila.activo) {
+                    <div>{{fila.activo.patente}}</div>
+                } @else if (fila.deshabilitada) {
+                    <div><span class="ocupado">No disponible</span></div>
+                } @else {
+                    <div><span class="disponible">Disponible</span></div>
+                }
+                <div>{{ fila.activo?.horaIngreso }}</div>
+                <div class="acciones-container">
+                    <button (click)="eliminarFila(fila.id, $event)" class="boton-resaltado1"></button>"
+            
+                </div>
+            </div>
+        }
+     </div>
+</main>

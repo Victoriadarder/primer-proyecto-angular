@@ -1,0 +1,19 @@
+<table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Mes</th>
+        <th>Usos</th>
+        <th>Cobrado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reporte of reportes; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ reporte.mes }}</td>
+        <td>{{ reporte.usos }}</td>
+        <td>{{ reporte.cobrado | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

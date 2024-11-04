@@ -1,0 +1,95 @@
+.login-container {
+    position: relative;
+    background-image: url('./../../../public/img/estacionamiento.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.logo, form, .links {
+    position: relative;
+    z-index: 2;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #FFD700; /* Añadir el borde inferior amarillo */
+    width: 300px; /* Igual que los campos de entrada */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #FFD700;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #FFD700; /* Texto amarillo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+    outline: none;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: #FFC107;
+    }
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.register-link {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: #FFD700;
+    }
+}
+
+
+

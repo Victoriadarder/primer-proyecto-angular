@@ -1,0 +1,90 @@
+h1 {
+    color: aquamarine;
+    font-size: 30px;
+    text-align: center; // Cambiado de `margin-left: center;` que es incorrecto
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: aqua;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+#tabla {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto; // Sin espacio entre 30 y px
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Corregido el valor de box-shadow
+}
+
+#header-tabla {
+    font-size: larger;
+    background-color: aqua;
+    color: aliceblue;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#tabla > div {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr; // Corregido el espacio en `1 fr`
+    border-bottom: 1px solid grey;
+    padding: 20px;
+    color: bisque;
+    text-align: center;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px; // Sin espacio en `10 px`
+    margin: 30px; // Sin espacio en `30 px`
+    color: bisque;
+}
+
+.user-actions {
+    text-decoration: none;
+    font-size: 20px; // Sin espacio en `20 px`
+    color: #e0f7fa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #a1bddb;
+        color: #fff;
+    }
+}
+
+button {
+    background-color: #a1bddb;
+    border: none;
+    color: #fff;
+    padding: 10px 20px; // Sin espacio en `20 px`
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #a1bddb;
+    }
+}
+
+.disponible {
+    background-color: #00c98d;
+    color: white;
+}
